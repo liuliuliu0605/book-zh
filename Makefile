@@ -55,18 +55,18 @@ pdf: $(DEPS) $(OBJ) $(PDFIMG)
 	@echo $(PDFIMG)
 	make -C build latex
 	sed -i s/\\.svg/.pdf/g ${TEX}
-	sed -i s/\}\\.gif/\_00\}.pdf/g $(TEX)
-	sed -i s/{tocdepth}{0}/{tocdepth}{1}/g $(TEX)
-	sed -i s/{\\\\releasename}{发布}/{\\\\releasename}{}/g $(TEX)
-	sed -i s/{OriginalVerbatim}\\\[commandchars=\\\\\\\\\\\\{\\\\}\\\]/{OriginalVerbatim}\\\[commandchars=\\\\\\\\\\\\{\\\\},formatcom=\\\\footnotesize\\\]/g $(TEX)
-	sed -i s/\\\\usepackage{geometry}/\\\\usepackage[paperwidth=187mm,paperheight=235mm,left=20mm,right=20mm,top=20mm,bottom=15mm,includefoot]{geometry}/g $(TEX)
+	#sed -i s/\}\\.gif/\_00\}.pdf/g $(TEX)
+	#sed -i s/{tocdepth}{0}/{tocdepth}{1}/g $(TEX)
+	#sed -i s/{\\\\releasename}{发布}/{\\\\releasename}{}/g $(TEX)
+	#sed -i s/{OriginalVerbatim}\\\[commandchars=\\\\\\\\\\\\{\\\\}\\\]/{OriginalVerbatim}\\\[commandchars=\\\\\\\\\\\\{\\\\},formatcom=\\\\footnotesize\\\]/g $(TEX)
+	#sed -i s/\\\\usepackage{geometry}/\\\\usepackage[paperwidth=187mm,paperheight=235mm,left=20mm,right=20mm,top=20mm,bottom=15mm,includefoot]{geometry}/g $(TEX)
 	# Allow figure captions to include space and autowrap
-	sed -i s/Ⓐ/\ /g ${TEX}
+	#sed -i s/Ⓐ/\ /g ${TEX}
 	# Remove un-translated long table descriptions
-	sed -i /\\\\multicolumn{2}{c}\%/d $(TEX)
-	sed -i /\\\\sphinxtablecontinued{Continued\ on\ next\ page}/d $(TEX)
-	sed -i /{\\\\tablename\\\\\ \\\\thetable{}\ --\ continued\ from\ previous\ page}/d $(TEX)
-	sed -i s/\\\\maketitle/\\\\maketitle\ \\\\pagebreak\\\\hspace{0pt}\\\\vfill\\\\begin{center}本书稿为测试版本（\ 生成日期：\\\\zhtoday\ ）。\\\\\\\\\ 访问\\\\url{https:\\/\\/zh.d2l.ai}，获取本书的最新版本或正式版本。\\\\end{center}\\\\vfill\\\\hspace{0pt}\\\\pagebreak/g $(TEX)
+	#sed -i /\\\\multicolumn{2}{c}\%/d $(TEX)
+	#sed -i /\\\\sphinxtablecontinued{Continued\ on\ next\ page}/d $(TEX)
+	#sed -i /{\\\\tablename\\\\\ \\\\thetable{}\ --\ continued\ from\ previous\ page}/d $(TEX)
+	#sed -i s/\\\\maketitle/\\\\maketitle\ \\\\pagebreak\\\\hspace{0pt}\\\\vfill\\\\begin{center}本书稿为测试版本（\ 生成日期：\\\\zhtoday\ ）。\\\\\\\\\ 访问\\\\url{https:\\/\\/zh.d2l.ai}，获取本书的最新版本或正式版本。\\\\end{center}\\\\vfill\\\\hspace{0pt}\\\\pagebreak/g $(TEX)
 
 	python build/utils/post_latex.py zh
 

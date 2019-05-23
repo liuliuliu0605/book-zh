@@ -72,9 +72,9 @@ source_suffix = ['.rst', '.ipynb', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = '《动手学深度学习》'
+project = '《这是书名》'
 copyright = '2017--2019'
-author = "Aston Zhang\\\\Mu Li\\\\Zachary C. Lipton\\\\Alexander J. Smola"
+author = "Auther A\\\\Auther B\\\\Auther C\\\\Auther D"
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -248,7 +248,7 @@ html_search_options = {'dict':jieba_dict}
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'D2Ldoc'
+htmlhelp_basename = 'Helpdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -306,7 +306,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'd2l-zh.tex', '动手学深度学习',
+    (master_doc, 'd2l-zh.tex', '书名',
      author, 'manual'),
 ]
 
