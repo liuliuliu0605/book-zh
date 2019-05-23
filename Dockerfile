@@ -46,6 +46,9 @@ RUN cd /book-zh/build/fonts && \
 # conda env for make pdf/html
 RUN conda env update -f /book-zh/build/env.yml
 
+# clear
+RUN rm -rf /var/lib/apt/lists/*
+
 # for chinese supports
 ENV LANG C.UTF-8
 
