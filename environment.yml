@@ -1,0 +1,8 @@
+name: venv
+dependencies:
+- python=3.6
+- pip:
+  - mxnet==1.4.0
+  - jupyter==1.0.0
+  - matplotlib==2.2.2
+  - pandas==0.23.4
